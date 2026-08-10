@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("./assest/hero-bg-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-nav {
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+}
+
+/* big text */
+.tourvia {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(5rem, 18vw, 17rem);
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.9;
+  line-height: 1;
+  margin-top: 2rem;
+}
+
+/* mountain image */
+.mountain {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 900px;
+  z-index: 3;
+  opacity: 0.6;
+}
+
+/* bottom content */
+.hero-content {
+  position: absolute;
+  bottom: 60px;
+  left: -3%;
+  width: 100%;
+  z-index: 5;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero-heading {
+  font-size: clamp(1rem, 4.5vw, 5rem);
+  font-weight: 200;
+  line-height: 1.1;
+  max-width: 700px;
+}
+.hero-content-right {
+  position: absolute;
+  right: 60px;
+  bottom: -5px;
+  z-index: 6;
+}
+.video-card {
+  width: 350px !important;
+  border-radius: 25px;
+  padding: 12px;
+  background: white;
+  border: none;
+  overflow: hidden;
+}
+.video-card .card-body {
+  padding: 12px 5px 0;
+}
+.who-badge {
+  padding: 10px 20px;
+  border: 1px solid rgba(14, 12, 12, 0.5);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  margin-top: 5rem;
+}
+.about-des {
+  text-transform: capitalize;
+  font-size: clamp(1rem, 3vw, 4rem);
+  font-weight: 540;
+  line-height: 1.2;
+}
+.more {
+  padding: 10px 20px;
+  border: 1px solid rgba(14, 12, 12, 0.5);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: white;
+}
+.img {
+  background-color: white;
+}
+.about-card {
+  background-color: #e8f1fd;
+  border: none;
+  border-radius: 20px;
+}
+.about-card img {
+  border-radius: 20px;
+}
+.view-btn {
+  color: black;
+  border: 1px solid grey;
+}
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  border: none;
+  height: 450px;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.destination-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  background: linear-gradient();
+  z-index: 1;
+}
+
+.destination-card:hover img {
+  transform: scale(1.05);
+}
+.destination-btn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #1f3c4e;
+  backdrop-filter: blur(10px);
+
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.destination-content {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  z-index: 2;
+  color: white;
+}
+
+.destination-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-content p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.choose-section {
+  padding: 80px 0;
+}
+
+.choose-wrapper {
+  border-radius: 30px;
+  overflow: hidden;
+  background: #edf2fa;
+}
+
+.choose-image {
+  position: relative;
+  height: 100%;
+}
+
+.choose-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-card {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+
+  width: 420px;
+  max-width: calc(100% - 60px);
+
+  background: rgba(83, 68, 55, 0.5);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  padding: 25px;
+
+  color: white;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.review-card h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.choose-content {
+  padding: 70px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.choose-btn {
+  width: fit-content;
+
+  padding: 12px 28px;
+  border-radius: 50px;
+
+  border: 1px solid #cfcfcf;
+  background: transparent;
+
+  font-size: 1rem;
+}
+
+.choose-content h3 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 600;
+
+  margin: 40px 0 80px;
+}
+
+/* FEATURE */
+.feature-box {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.feature-line {
+  width: 3px;
+  height: 180px;
+  background: #2f80ff;
+}
+
+.feature-icon {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+  background: #2f80ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 2rem;
+
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 500px;
+}
+.package-card {
+  border-radius: 20px;
+  border: 2px solid #e8f1fd;
+}
+.package-btn {
+  background-color: #e8f1fd;
+}
+.package-card img {
+  border-radius: 35px !important;
+}
+.testimonials-wrapper {
+  border-radius: 30px;
+  overflow: hidden;
+  background: #edf2fa;
+}
+
+.name {
+  margin-top: 10rem !important;
+}
+.testimonials-img {
+  max-height: 450px;
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+.tour-card {
+  position: relative;
+  height: 90vh;
+  border-radius: 30px;
+  overflow: hidden; /* important */
+}
+
+.tour-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-info-card {
+  position: absolute;
+  right: 40px;
+  width: 420px;
+  top: 50%;
+
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s ease;
+}
+.tour-title {
+  margin-top: 90px;
+}
+
+#tourCard1 {
+  top: 30% !important;
+}
+
+#tourCard2 {
+  top: 50%;
+}
+
+#tourCard3 {
+  top: 75%;
+}
+.video {
+  width: 100%;
+}
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh !important;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000; /* ← add this so no grey shows */
+}
+
+.bg-video {
+  position: relative;
+  top: 50%; /* ← add these */
+  left: 50%; /* ← add these */
+  transform: translate(-50%, -50%); /* ← add this */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.bg-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+}
+
+.video-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: clamp(4rem, 15vw, 14rem); /* slightly smaller */
+  font-weight: 900;
+  color: white;
+  opacity: 0.5;
+  white-space: nowrap;
+  z-index: 5;
+  line-height: 1;
+  letter-spacing: -2px;
+  user-select: none;
+  will-change: transform;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+/* seamless, non-stop marquee for EXPLORE NOW */
+.video-text-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+.video-text-track span {
+  display: inline-block;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* shifts exactly one full "set" (4 spans) so the loop is seamless */
+    transform: translateX(-50%);
+  }
+}
+
+.video-play-wrapper {
+  position: relative;
+  z-index: 4;
+}
+
+.play-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background: #fff;
+}
+.travel-btn {
+  background-color: #e8f1fd;
+}
+
+.blog-img {
+  height: 55vh !important;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.footer {
+  min-height: 700px;   /* pick whatever suits your design */
+  background-image:
+    linear-gradient(#fff, #00255480 22%, #070707), url(./assest/footer-img.webp);
+  background-position:
+    0 0,
+    50% 80%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+}
+.footer-link{
+
+  margin-top: 10rem !important;
+  list-style: none;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+.service{
+
+  margin-top: 6rem !important;
+  color: white;
+  font-weight: 500;
+}
+
+.arrow-white{
+background-color: #1A77ED;
+}
+ul{
+
+  list-style: none;
+}
+.tourvia-2 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(5rem, 18vw, 17rem);
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.2;
+  line-height: 1;
+  margin-top: 2rem;
+}
+
+/* ===== HOVER EFFECTS ===== */
+
+/* nav links */
+.nav-link {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffb400 !important;
+  opacity: 0.85;
+}
+
+/* generic buttons */
+.btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.more:hover,
+.who-badge:hover,
+.choose-btn:hover,
+.view-btn:hover,
+.travel-btn:hover {
+  background-color: #1a77ed;
+  border-color: #1a77ed;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(26, 119, 237, 0.35);
+}
+
+/* destination card */
+.destination-card {
+  transition: box-shadow 0.35s ease;
+}
+.destination-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.destination-btn {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.destination-btn:hover {
+  background: #1a77ed;
+  transform: scale(1.05);
+}
+
+/* video card */
+.video-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* about card */
+.about-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* package card */
+.package-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  border-color: #1a77ed;
+}
+
+/* blog card image */
+.blog-img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.blog-card:hover .blog-img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* play button already has a hover rule above; add subtle glow */
+.play-btn:hover {
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+/* footer quick links */
+.footer-link li {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  cursor: pointer;
+}
+.footer-link li:hover {
+  color: #1a77ed;
+  padding-left: 6px;
+}
+
+/* tour info cards */
+.tour-info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tour-info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
